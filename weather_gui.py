@@ -1,8 +1,11 @@
 import requests
 import tkinter as tk
 import datetime
+import os
+from dotenv import load_dotenv
 
-API_KEY = '87343eb80377dc5af0a1dcd6fd66d136'
+load_dotenv()
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 def get_weather():
     city = city_entry.get()

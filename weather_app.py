@@ -1,7 +1,12 @@
 # weather_app.py
 import requests # type: ignore
+ # Replace with your OpenWeatherMap API key
+import os
+from dotenv import load_dotenv
 
-API_KEY = '87343eb80377dc5af0a1dcd6fd66d136'  # Replace with your OpenWeatherMap API key
+load_dotenv()
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
+
 BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 def get_weather(city):
